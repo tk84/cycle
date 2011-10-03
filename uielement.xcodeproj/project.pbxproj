@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45F1F35A1439743400C16FE7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1F3591439743400C16FE7 /* Cocoa.framework */; };
+		45F1F35C1439743400C16FE7 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1F35B1439743400C16FE7 /* MacRuby.framework */; };
+		45F1F3631439743400C16FE7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45F1F3611439743400C16FE7 /* InfoPlist.strings */; };
+		45F1F3651439743400C16FE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F1F3641439743400C16FE7 /* main.m */; };
+		45F1F36A1439743400C16FE7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45F1F3681439743400C16FE7 /* MainMenu.xib */; };
+		45F1F36D1439743400C16FE7 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 45F1F36C1439743400C16FE7 /* rb_main.rb */; };
+		45F1F36F1439743400C16FE7 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 45F1F36E1439743400C16FE7 /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		45F1F3551439743400C16FE7 /* uielement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uielement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F1F3591439743400C16FE7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		45F1F35B1439743400C16FE7 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		45F1F3601439743400C16FE7 /* uielement-Info.plist */ = {isa = PBXFileReference; path = "uielement-Info.plist"; sourceTree = "<group>"; };
+		45F1F3621439743400C16FE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		45F1F3641439743400C16FE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45F1F3661439743400C16FE7 /* uielement-Prefix.pch */ = {isa = PBXFileReference; path = "uielement-Prefix.pch"; sourceTree = "<group>"; };
+		45F1F3691439743400C16FE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		45F1F36C1439743400C16FE7 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		45F1F36E1439743400C16FE7 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45F1F3521439743400C16FE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F1F35A1439743400C16FE7 /* Cocoa.framework in Frameworks */,
+				45F1F35C1439743400C16FE7 /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45F1F34A1439743300C16FE7 = {
+			isa = PBXGroup;
+			children = (
+				45F1F35E1439743400C16FE7 /* uielement */,
+				45F1F3581439743400C16FE7 /* Frameworks */,
+				45F1F3561439743400C16FE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45F1F3561439743400C16FE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45F1F3551439743400C16FE7 /* uielement.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45F1F3581439743400C16FE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45F1F3591439743400C16FE7 /* Cocoa.framework */,
+				45F1F35B1439743400C16FE7 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45F1F35E1439743400C16FE7 /* uielement */ = {
+			isa = PBXGroup;
+			children = (
+				45F1F36E1439743400C16FE7 /* AppDelegate.rb */,
+				45F1F3671439743400C16FE7 /* Resources */,
+				45F1F36B1439743400C16FE7 /* Other Sources */,
+				45F1F35F1439743400C16FE7 /* Supporting Files */,
+			);
+			path = uielement;
+			sourceTree = "<group>";
+		};
+		45F1F35F1439743400C16FE7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45F1F3601439743400C16FE7 /* uielement-Info.plist */,
+				45F1F3611439743400C16FE7 /* InfoPlist.strings */,
+				45F1F3641439743400C16FE7 /* main.m */,
+				45F1F3661439743400C16FE7 /* uielement-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45F1F3671439743400C16FE7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45F1F3681439743400C16FE7 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		45F1F36B1439743400C16FE7 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				45F1F36C1439743400C16FE7 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		45F1F35D1439743400C16FE7 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 45F1F3751439743400C16FE7 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		45F1F3541439743400C16FE7 /* uielement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45F1F3721439743400C16FE7 /* Build configuration list for PBXNativeTarget "uielement" */;
+			buildPhases = (
+				45F1F3511439743400C16FE7 /* Sources */,
+				45F1F3521439743400C16FE7 /* Frameworks */,
+				45F1F3531439743400C16FE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uielement;
+			productName = uielement;
+			productReference = 45F1F3551439743400C16FE7 /* uielement.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45F1F34C1439743300C16FE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 45F1F34F1439743300C16FE7 /* Build configuration list for PBXProject "uielement" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 45F1F34A1439743300C16FE7;
+			productRefGroup = 45F1F3561439743400C16FE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45F1F3541439743400C16FE7 /* uielement */,
+				45F1F35D1439743400C16FE7 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45F1F3531439743400C16FE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F1F3631439743400C16FE7 /* InfoPlist.strings in Resources */,
+				45F1F36A1439743400C16FE7 /* MainMenu.xib in Resources */,
+				45F1F36D1439743400C16FE7 /* rb_main.rb in Resources */,
+				45F1F36F1439743400C16FE7 /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45F1F3511439743400C16FE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F1F3651439743400C16FE7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		45F1F3611439743400C16FE7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45F1F3621439743400C16FE7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		45F1F3681439743400C16FE7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45F1F3691439743400C16FE7 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45F1F3701439743400C16FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		45F1F3711439743400C16FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		45F1F3731439743400C16FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "uielement/uielement-Prefix.pch";
+				INFOPLIST_FILE = "uielement/uielement-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		45F1F3741439743400C16FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "uielement/uielement-Prefix.pch";
+				INFOPLIST_FILE = "uielement/uielement-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		45F1F3761439743400C16FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		45F1F3771439743400C16FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45F1F34F1439743300C16FE7 /* Build configuration list for PBXProject "uielement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45F1F3701439743400C16FE7 /* Debug */,
+				45F1F3711439743400C16FE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45F1F3721439743400C16FE7 /* Build configuration list for PBXNativeTarget "uielement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45F1F3731439743400C16FE7 /* Debug */,
+				45F1F3741439743400C16FE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45F1F3751439743400C16FE7 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45F1F3761439743400C16FE7 /* Debug */,
+				45F1F3771439743400C16FE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45F1F34C1439743300C16FE7 /* Project object */;
+}
