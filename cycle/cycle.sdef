@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="uielement Terminology">
+  <!--
+  uielement SUITE
+  -->
+  <suite name="uielement Suite" code="????" description="uitest specific classes.">
+    <command name="cycle" code="cyclexxx" description="cycle windows">
+      <cocoa class="Cycle"/>
+    </command>
+    <command name="hoge" code="testxxxx" description="test COMMAND">
+      <cocoa class="Test"/>
+      <direct-parameter description="a text parameter passed to the command">
+        <type type="text"/>
+      </direct-parameter>
+      <parameter name="prose" code="Pros" type="text" optional="yes" 
+        description="a text parameter.">
+        <cocoa key="ProseText"/>
+      </parameter>
+    </command>
+  </suite>
+</dictionary>
