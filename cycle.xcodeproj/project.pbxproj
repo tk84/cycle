@@ -56,7 +56,7 @@
 		45F1F34A1439743300C16FE7 = {
 			isa = PBXGroup;
 			children = (
-				45F1F35E1439743400C16FE7 /* uielement */,
+				45F1F35E1439743400C16FE7 /* cycle */,
 				45F1F3581439743400C16FE7 /* Frameworks */,
 				45F1F3561439743400C16FE7 /* Products */,
 			);
@@ -80,14 +80,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		45F1F35E1439743400C16FE7 /* uielement */ = {
+		45F1F35E1439743400C16FE7 /* cycle */ = {
 			isa = PBXGroup;
 			children = (
 				45F1F3671439743400C16FE7 /* Resources */,
 				45F1F36B1439743400C16FE7 /* Other Sources */,
 				45F1F35F1439743400C16FE7 /* Supporting Files */,
 			);
-			name = uielement;
 			path = cycle;
 			sourceTree = "<group>";
 		};
@@ -155,7 +154,7 @@
 			dependencies = (
 			);
 			name = cycle;
-			productName = uielement;
+			productName = cycle;
 			productReference = 45F1F3551439743400C16FE7 /* cycle.app */;
 			productType = "com.apple.product-type.application";
 		};
