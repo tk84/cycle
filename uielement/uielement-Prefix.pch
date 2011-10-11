@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'uielement' target in the 'uielement' project
-//
-
-#ifdef __OBJC__
-  #import <Cocoa/Cocoa.h>
-#endif
