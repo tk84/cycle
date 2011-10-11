@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		455956A0143B493A00748402 /* WindowServer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4559569F143B493A00748402 /* WindowServer.rb */; };
 		4599D8CD143C8DA200EFC133 /* hotkey.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4599D8CA143C8BA100EFC133 /* hotkey.bundle */; };
 		45E389821439F2B000C07460 /* cycle.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 45E389811439F2B000C07460 /* cycle.sdef */; };
 		45E389851439F34C00C07460 /* ScriptingInterface.rb in Resources */ = {isa = PBXBuildFile; fileRef = 45E389841439F34C00C07460 /* ScriptingInterface.rb */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4559569F143B493A00748402 /* WindowServer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = WindowServer.rb; sourceTree = "<group>"; };
 		4599D8CA143C8BA100EFC133 /* hotkey.bundle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = hotkey.bundle; path = ../source/hotkey.bundle; sourceTree = "<group>"; };
 		45E389811439F2B000C07460 /* cycle.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cycle.sdef; sourceTree = "<group>"; };
 		45E389841439F34C00C07460 /* ScriptingInterface.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ScriptingInterface.rb; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 			children = (
 				45F1F36E1439743400C16FE7 /* AppDelegate.rb */,
 				45E389841439F34C00C07460 /* ScriptingInterface.rb */,
-				4559569F143B493A00748402 /* WindowServer.rb */,
 				45F1F3681439743400C16FE7 /* Cycle.xib */,
 			);
 			name = Resources;
@@ -196,7 +193,6 @@
 				45F1F36F1439743400C16FE7 /* AppDelegate.rb in Resources */,
 				45E389821439F2B000C07460 /* cycle.sdef in Resources */,
 				45E389851439F34C00C07460 /* ScriptingInterface.rb in Resources */,
-				455956A0143B493A00748402 /* WindowServer.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
