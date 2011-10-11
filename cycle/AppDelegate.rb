@@ -170,5 +170,10 @@ class AppDelegate
   def hotkeyWasPressed
     cycleWindow
   end
+
+  #
+  def hotkeyWasPressed2
+    cycleApplication
+  end
 end
 

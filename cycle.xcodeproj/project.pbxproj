@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4559569F143B493A00748402 /* WindowServer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = WindowServer.rb; sourceTree = "<group>"; };
-		4599D8CA143C8BA100EFC133 /* hotkey.bundle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = hotkey.bundle; sourceTree = "<group>"; };
+		4599D8CA143C8BA100EFC133 /* hotkey.bundle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = hotkey.bundle; path = ../source/hotkey.bundle; sourceTree = "<group>"; };
 		45E389811439F2B000C07460 /* cycle.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cycle.sdef; sourceTree = "<group>"; };
 		45E389841439F34C00C07460 /* ScriptingInterface.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ScriptingInterface.rb; sourceTree = "<group>"; };
 		45F1F3551439743400C16FE7 /* cycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
