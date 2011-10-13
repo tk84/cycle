@@ -18,6 +18,7 @@
 		45F1F36D1439743400C16FE7 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 45F1F36C1439743400C16FE7 /* rb_main.rb */; };
 		45F1F36F1439743400C16FE7 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 45F1F36E1439743400C16FE7 /* AppDelegate.rb */; };
 		45F1F37B1439744E00C16FE7 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1F37A1439744E00C16FE7 /* ApplicationServices.framework */; };
+		45F54F511444E0FF00E02D19 /* Timer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 45F54F501444E0FF00E02D19 /* Timer.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		45F1F36C1439743400C16FE7 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		45F1F36E1439743400C16FE7 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		45F1F37A1439744E00C16FE7 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		45F54F501444E0FF00E02D19 /* Timer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Timer.rb; path = ../../../../local/lib/Timer.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		45F1F36B1439743400C16FE7 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				45F54F501444E0FF00E02D19 /* Timer.rb */,
 				4599D8CA143C8BA100EFC133 /* hotkey.bundle */,
 				45F1F36C1439743400C16FE7 /* rb_main.rb */,
 			);
@@ -193,6 +196,7 @@
 				45F1F36F1439743400C16FE7 /* AppDelegate.rb in Resources */,
 				45E389821439F2B000C07460 /* cycle.sdef in Resources */,
 				45E389851439F34C00C07460 /* ScriptingInterface.rb in Resources */,
+				45F54F511444E0FF00E02D19 /* Timer.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

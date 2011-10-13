@@ -7,7 +7,10 @@
 #  Copyright 2011年 __MyCompanyName__. All rights reserved.
 #
 
-require File.dirname(__FILE__) + '/hotkey.bundle'
+require 'Timer'
+require 'hotkey'
+
+#require File.dirname(__FILE__) + '/hotkey.bundle'
 
 class AppDelegate
   attr_accessor :systemMenu
@@ -38,6 +41,16 @@ class AppDelegate
     workspace.notificationCenter.addObserver self,
     selector:NSSelectorFromString('applicationLaunched:'),
     name:NSWorkspaceDidLaunchApplicationNotification, object:workspace
+
+    # 最近起動されたアプリケーションを見張るコールバックを登録
+    @recentApps = @apps.dup
+    @recentApplicationCallback = Proc.new do |tm|
+      @recentApps -= (@recentApps - @apps)      # 終了したアプリケーションを取り除く
+      @recentApps += @apps      # 新しく追加されたアプリケーションは最後に
+      @recentApps.uniq!
+      @recentApps.unshift @recentApps.delete @apps.first
+      @apps.replace(@recentApps)
+    end
 
     # ホットキーを登録
     @hotkey = Hotkey.new
@@ -83,6 +96,16 @@ class AppDelegate
         @windows[pid].push window
       end
     end
+
+    # 最新のアプリケーションを検出
+    if not @tm
+      @tm = Timer.setTimeout 3000 do
+        @recentApplicationCallback.call
+        @tm = nil
+      end
+    else
+      @tm.start
+    end
   end
 
   # ウィンドウの切り替え
@@ -96,8 +119,6 @@ class AppDelegate
       res = Pointer.new(:id)
       if AXUIElementCopyAttributeValue(app, 'AXMainWindow', res)
         window = res[0]
-
-        #@windows[pid].rotate!(@windows[pid].index window)
 
         while 1 < @windows[pid].count
           window = @windows[pid][1]
