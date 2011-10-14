@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4599D8CD143C8DA200EFC133 /* hotkey.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4599D8CA143C8BA100EFC133 /* hotkey.bundle */; };
 		45E389821439F2B000C07460 /* cycle.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 45E389811439F2B000C07460 /* cycle.sdef */; };
 		45E389851439F34C00C07460 /* ScriptingInterface.rb in Resources */ = {isa = PBXBuildFile; fileRef = 45E389841439F34C00C07460 /* ScriptingInterface.rb */; };
 		45F1F35A1439743400C16FE7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1F3591439743400C16FE7 /* Cocoa.framework */; };
@@ -19,10 +18,11 @@
 		45F1F36F1439743400C16FE7 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 45F1F36E1439743400C16FE7 /* AppDelegate.rb */; };
 		45F1F37B1439744E00C16FE7 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1F37A1439744E00C16FE7 /* ApplicationServices.framework */; };
 		45F54F511444E0FF00E02D19 /* Timer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 45F54F501444E0FF00E02D19 /* Timer.rb */; };
+		45FE94CD1448943B007C1F09 /* HotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FE94CC1448943A007C1F09 /* HotKey.m */; };
+		45FE94CF14489524007C1F09 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FE94CE14489524007C1F09 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4599D8CA143C8BA100EFC133 /* hotkey.bundle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = hotkey.bundle; path = ../source/hotkey.bundle; sourceTree = "<group>"; };
 		45E389811439F2B000C07460 /* cycle.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cycle.sdef; sourceTree = "<group>"; };
 		45E389841439F34C00C07460 /* ScriptingInterface.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ScriptingInterface.rb; sourceTree = "<group>"; };
 		45F1F3551439743400C16FE7 /* cycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,7 +36,10 @@
 		45F1F36C1439743400C16FE7 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		45F1F36E1439743400C16FE7 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		45F1F37A1439744E00C16FE7 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
-		45F54F501444E0FF00E02D19 /* Timer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Timer.rb; path = ../../../../local/lib/Timer.rb; sourceTree = "<group>"; };
+		45F54F501444E0FF00E02D19 /* Timer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Timer.rb; path = ../Users/hiro/lib/Timer.rb; sourceTree = DEVELOPER_DIR; };
+		45FE94CB1448943A007C1F09 /* HotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKey.h; sourceTree = "<group>"; };
+		45FE94CC1448943A007C1F09 /* HotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotKey.m; sourceTree = "<group>"; };
+		45FE94CE14489524007C1F09 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45FE94CF14489524007C1F09 /* Carbon.framework in Frameworks */,
 				45F1F37B1439744E00C16FE7 /* ApplicationServices.framework in Frameworks */,
 				45F1F35A1439743400C16FE7 /* Cocoa.framework in Frameworks */,
 				45F1F35C1439743400C16FE7 /* MacRuby.framework in Frameworks */,
@@ -56,6 +60,7 @@
 		45F1F34A1439743300C16FE7 = {
 			isa = PBXGroup;
 			children = (
+				45FE94CE14489524007C1F09 /* Carbon.framework */,
 				45F1F35E1439743400C16FE7 /* cycle */,
 				45F1F3581439743400C16FE7 /* Frameworks */,
 				45F1F3561439743400C16FE7 /* Products */,
@@ -108,6 +113,8 @@
 				45F1F36E1439743400C16FE7 /* AppDelegate.rb */,
 				45E389841439F34C00C07460 /* ScriptingInterface.rb */,
 				45F1F3681439743400C16FE7 /* Cycle.xib */,
+				45FE94CB1448943A007C1F09 /* HotKey.h */,
+				45FE94CC1448943A007C1F09 /* HotKey.m */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -116,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				45F54F501444E0FF00E02D19 /* Timer.rb */,
-				4599D8CA143C8BA100EFC133 /* hotkey.bundle */,
 				45F1F36C1439743400C16FE7 /* rb_main.rb */,
 			);
 			name = "Other Sources";
@@ -189,7 +195,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4599D8CD143C8DA200EFC133 /* hotkey.bundle in Resources */,
 				45F1F3631439743400C16FE7 /* InfoPlist.strings in Resources */,
 				45F1F36A1439743400C16FE7 /* Cycle.xib in Resources */,
 				45F1F36D1439743400C16FE7 /* rb_main.rb in Resources */,
@@ -208,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45F1F3651439743400C16FE7 /* main.m in Sources */,
+				45FE94CD1448943B007C1F09 /* HotKey.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

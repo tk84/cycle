@@ -8,11 +8,8 @@
 #
 
 require 'Timer'
-require 'hotkey'
 
-#require File.dirname(__FILE__) + '/hotkey.bundle'
-
-class AppDelegate
+class AppDelegate < HotKey
   attr_accessor :systemMenu
 
   # アプリケーションの終了
@@ -27,7 +24,7 @@ class AppDelegate
   # 初期化
   def applicationDidFinishLaunching(a_notification)
     # Insert code here to initialize your application
-
+   
     @apps = []
     @windows = Hash.new {|hash, key| hash[key] = []}
 
@@ -52,11 +49,11 @@ class AppDelegate
       @apps.replace(@recentApps)
     end
 
-    # ホットキーを登録
-    @hotkey = Hotkey.new
-    @hotkey.delegate = self
-    @hotkey.addHotkey
 
+    # ホットキーを登録
+    addHotKey 50, modifier:CmdKey, onKeyPressed:'keyPressedCycleWindow'
+    addHotKey 48, modifier:ControlKey, onKeyPressed:'keyPressedCycleApplication'
+    
     # システムメニューに表示
     bar = NSStatusBar.systemStatusBar
     item = bar.statusItemWithLength NSVariableStatusItemLength
@@ -187,13 +184,13 @@ class AppDelegate
     complete
   end
 
-  # ホットキーが押された
-  def hotkeyWasPressed
+  # ウィンドウ切り替えに割り当てられたホットキーが押された時
+  def keyPressedCycleWindow
     cycleWindow
   end
 
-  #
-  def hotkeyWasPressed2
+  # アプリケーション切り替えに割り当てられたホットキーが押された時
+  def keyPressedCycleApplication
     cycleApplication
   end
 end
