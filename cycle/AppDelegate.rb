@@ -24,7 +24,7 @@ class AppDelegate < HotKey
   # 初期化
   def applicationDidFinishLaunching(a_notification)
     # Insert code here to initialize your application
-   
+
     @apps = []
     @windows = Hash.new {|hash, key| hash[key] = []}
 
@@ -49,11 +49,11 @@ class AppDelegate < HotKey
       @apps.replace(@recentApps)
     end
 
-
     # ホットキーを登録
     addHotKey 50, modifier:CmdKey, onKeyPressed:'keyPressedCycleWindow'
     addHotKey 48, modifier:ControlKey, onKeyPressed:'keyPressedCycleApplication'
-    
+    addHotKey 48, modifier:ControlKey+ShiftKey, onKeyPressed:'keyPressedCycleApplicationReverse'
+
     # システムメニューに表示
     bar = NSStatusBar.systemStatusBar
     item = bar.statusItemWithLength NSVariableStatusItemLength
@@ -72,6 +72,12 @@ class AppDelegate < HotKey
 
   # 切り替えられたら
   def applicationOrWindowSwitched element, notification
+    res = Pointer.new('i')
+    AXUIElementGetPid(element, res)
+    pid = res[0]
+
+    if i = @apps.index(pid) then @apps.rotate! i else @apps.push pid end
+
     window = case notification
              when KAXApplicationActivatedNotification
                res = Pointer.new(:id)
@@ -81,12 +87,6 @@ class AppDelegate < HotKey
                element
              end
     if window
-      res = Pointer.new('i')
-      AXUIElementGetPid(window, res)
-      pid = res[0]
-
-      if i = @apps.index(pid) then @apps.rotate! i else @apps.push pid end
-
       if i = @windows[pid].index(window)
         @windows[pid].rotate!(@windows[pid].index window)
       else
@@ -120,30 +120,34 @@ class AppDelegate < HotKey
         while 1 < @windows[pid].count
           window = @windows[pid][1]
           break if 0 == AXUIElementPerformAction(window, 'AXRaise')
-          @windows[pid].slice! 1
+          @windows[pid].delete window
         end
       end
     end
   end
 
   # アプリケーションの切り替え
-  def cycleApplication
-    if startPid = @apps[1]
+  def cycleApplication reverse=false
+    nextIndex = reverse ? -1 : 1
+    if startPid = @apps[nextIndex]
       pid = startPid
       begin
+        puts "pid:#{pid}, @apps:#{@apps}"
         if app = NSRunningApplication.runningApplicationWithProcessIdentifier(pid)
           break if app.activateWithOptions(NSApplicationActivateAllWindows|
                        NSApplicationActivateIgnoringOtherApps)
         end
-        @apps.slice! 1
-      end while pid = @apps[1] and startPid != pid
+        @apps.delete pid
+      end while pid = @apps[nextIndex] and startPid != pid
     end
   end
 
+  # メニューからウィンドウ切り替え
   def performCycleWindow sender
     cycleWindow
   end
 
+  # メニューからアプリケーション切り替え
   def performCycleApplication sender
     cycleApplication
   end
@@ -192,6 +196,11 @@ class AppDelegate < HotKey
   # アプリケーション切り替えに割り当てられたホットキーが押された時
   def keyPressedCycleApplication
     cycleApplication
+  end
+
+  # アプリケーションを逆向きで切り替え
+  def keyPressedCycleApplicationReverse
+    cycleApplication true
   end
 end
 
